@@ -1,0 +1,49 @@
+# Mac OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux Files
+*~
+
+# Vagrant Files
+.vagrant
+
+# SVN
+.svn
+
+# Common files
+*.log
+*.tmp
+*.out
+*.lock
+*.swp
+*.so
+
+# SASS
+*.sass-cache
+
+# RubyMine
+.idea/workspace.xml
+
+# NetBeans IDE
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Sublime Text
+*.sublime-workspace

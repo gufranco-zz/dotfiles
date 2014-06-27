@@ -1,0 +1,122 @@
+[user]
+  # Nome do usuário que será utilizado nos commits
+  name = Gustavo Franco
+
+  # Email de identificação do usuário
+  email = gustavocfranco@gmail.com
+
+[github]
+  # Username do usuário no github
+  user = gufranco
+
+[core]
+  # Arquivo global de ignores
+  excludesfile = ~/.gitglobalignore
+
+  # Mantem a quebra de linha original do arquivo remoto. Não converte para CRLF
+  autocrlf = input
+
+  # Paginação dos resultados
+  pager = less -FRSX
+
+  # Corrige e remove espaços em branco, usa CR no final das linhas e indenta com espaço
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+  # Editor padrão de texto para ser utilizado quando necessário
+  editor = vim -f
+
+[color]
+  ui = auto
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+
+[color "branch"]
+  current = magenta
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
+
+[branch]
+  # Sempre efetuar rebase ao ocorrer merge no branch
+  autosetuprebase = always
+
+[rerere]
+  # Utilizar conflitos já resolvidos por outros usuários
+  enabled = true
+
+[push]
+  # Enviar somente o branch atual no push
+  default = current
+
+[help]
+  # Sugerir o comando correto ao digitar errado
+  autocorrect = 1
+
+[alias]
+  # Quem sou eu? :)
+  me = config user.name
+
+  # Efetua commit das modificações efetuadas no branch
+  ci = commit
+
+  # Efetua checkout do branch informado
+  co = checkout
+
+  # Exibe status do branch atual de forma mais simplificada (menos verbosa)
+  st = status -sb
+
+  # Efetua checkout do branch master
+  cm = checkout master
+
+  # Efetua checkout do branch development
+  cd = checkout development
+
+  # Efetua push do branch atual para o branch master
+  pm = push -u origin master
+
+  # Efetua push do branch atual para o branch development
+  pd = push -u origin development
+
+  # Sincroniza o repositório local com o remoto
+  fe = fetch origin
+
+  # Cria um novo branch baseado no branch atual
+  fork = checkout -b
+
+  # Efetua pull sem rebase automático
+  pmerge = pull --no-rebase
+
+  # Logs bonitinhos, ne? Ninguém é de ferro :)
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+  # Exibe os commits remotos que estão acima do branch local
+  incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
+
+  # Exibe os commits locais que estão acima do branch remoto
+  outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
+
+  # Desfaz a inclusao de arquivos modificados
+  unstage = reset HEAD --
+
+  # Desfaz a modificação no arquivo
+  undo = checkout --
+
+  # Exibe o log dos commits efetuados por mim nas últimas 24 horas
+  standup = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --since yesterday --author 'Gustavo Franco'
+
+  # Revisa os commits que serão enviados antes do push - http://code.joejag.com/2013/everyday-git-aliases/
+  ready = rebase -i @{u}
+
+  # Exibe a hierarquia dos branchs
+  hier = log --all --graph --decorate --oneline --simplify-by-decoration
+
+  # Efetua backup do repositório local
+  backup = !tar -cvzf ../git_backup.tgz *
