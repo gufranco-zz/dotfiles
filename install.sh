@@ -10,4 +10,4 @@ ln -s ~/.dotfiles/gitglobalignore ~/.gitglobalignore
 
 echo "Configuring oh-my-zsh"
 ln -s ~/.dotfiles/zshrc ~/.zshrc
-ln -s ~/oh-my-zsh ~/.oh-my-zsh
+ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh
