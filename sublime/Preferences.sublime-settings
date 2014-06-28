@@ -1,0 +1,143 @@
+/*
+ * Dependências desse arquivo de configuração:
+ *
+ * Fonte: font.ubuntu.com
+ * Tema : github.com/buymeasoda/soda-theme
+ * Cores: github.com/chriskempson/tomorrow-theme
+ */
+{
+  // Esquema de cores para Sublime
+  "theme": "Soda Dark.sublime-theme",
+
+  // Esquema de cores para texto
+  "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+
+  // Altera a tecla que faz o autocomplete para tab
+  "auto_complete_commit_on_tab": true,
+
+  // Garante que exista uma linha em branco no fim dos arquivos
+  "ensure_newline_at_eof_on_save": true,
+
+  // Fonte do texto
+  "font_face": "Ubuntu Mono",
+
+  // Tamanho da fonte do texto
+  "font_size": 12.0,
+
+  // Suavização da fonte do texto
+  "font_options": ["subpixel_antialias"],
+
+  // Destaca a linha que o cursor esta
+  "highlight_line": true,
+
+  // Destaca as abas que possuem modificação
+  "highlight_modified_tabs": true,
+
+  // Esconde o mapa do arquivo
+  "new_window_settings": {"show_minimap": false},
+
+  /*
+   * Exibe guia nas colunas com recomendação PEP8
+   * Docstrings: 72
+   * Código: 79
+   */
+  "rulers": [72, 79],
+
+  // Salva o arquivo atual quando a aba não esta em foco
+  "save_on_focus_lost": true,
+
+  // Exibe o caminho completo do arquivo que está sendo editado
+  "show_full_path": true,
+
+  // Converte TABs em espaços
+  "translate_tabs_to_spaces": true,
+
+  // Define a identação com tamanho 2
+  "tab_size": 2,
+
+  // Remove espaços em branco quando o arquivo é salvo
+  "trim_trailing_white_space_on_save": true,
+
+  // Nome de diretórios em negrito
+  "bold_folder_labels": true,
+
+  // Desabilita o drag and drop de seleção de textos
+  "drag_text": false,
+
+  // Formato do cursor (Opções: smooth, phase, blink, wide e solid)
+  "caret_style": "phase",
+
+  // Exibe caracteres em branco
+  "draw_white_space": "all",
+
+  // Opção de recolher ou exibir bloco de código sempre visível
+  "fade_fold_buttons": false,
+
+  // Exibe onde começa e termina a identação
+  "indent_guide_options": ["draw_normal", "draw_active"],
+
+  // Marca palavras semelhantes da palavra selecionada
+  "find_selected_text": true,
+
+  // Arquivos binários
+  "binary_file_patterns": ["*.psd",
+                           "*.jpg",
+                           "*.jpeg",
+                           "*.png",
+                           "*.gif",
+                           "*.ttf",
+                           "*.tga",
+                           "*.dds",
+                           "*.ico",
+                           "*.eot",
+                           "*.pdf",
+                           "*.swf",
+                           "*.jar",
+                           "*.zip"],
+
+  // Arquivos ignorados
+  "file_exclude_patterns": ["*.lib",
+                            ".DS_Store",
+                            "*~",
+                            "*.class",
+                            "*.db",
+                            "*.tmp",
+                            "*.out",
+                            "*.lock",
+                            "*.swp",
+                            "*.so",
+                            "Thumbs.db",
+                            "ehthumbs.db",
+                            "Desktop.ini",
+                            "*.sass-cache"],
+
+  // Pastas ignoradas
+  "folder_exclude_patterns": [".git",
+                              ".svn",
+                              ".vagrant",
+                              ".idea",
+                              "nbproject",
+                              ".hg",
+                              "CVS",
+                              "_build",
+                              "dist",
+                              "build",
+                              "$RECYCLE.BIN"],
+
+  // Espaçamento superior da linha
+  "line_padding_top": 1,
+
+  // Espaçamento inferior da linha
+  "line_padding_bottom": 1,
+
+  // Indentação de código
+  "indent_guide_options": ["draw_normal"],
+  "indent_subsequent_lines": true,
+  "match_brackets": true,
+  "match_brackets_angle": false,
+  "match_brackets_braces": true,
+  "match_brackets_content": true,
+  "match_brackets_square": true,
+  "match_selection": true,
+  "match_tags": true
+}
