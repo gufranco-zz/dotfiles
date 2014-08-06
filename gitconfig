@@ -94,6 +94,9 @@
   # Efetua pull sem rebase automático
   pmerge = pull --no-rebase
 
+  # Efetua pull do projeto e todos os submodulos
+  pull-sub = !(git submodule foreach git pull origin master)
+
   # Logs bonitinhos, ne? Ninguém é de ferro :)
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
