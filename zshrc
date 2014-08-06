@@ -15,6 +15,8 @@ alias mem="top -o rsize"
 alias la="ls -aF"
 alias ld="ls -ld"
 alias ll="ls -l"
+alias f5="source ~/.zshrc"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -23,7 +25,7 @@ alias ll="ls -l"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=6
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -53,7 +55,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby node rvm vagrant brew gem github npm)
+plugins=(git rails ruby node rvm vagrant brew gem github npm osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,6 +66,9 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=pt_BR.UTF-8
+
+# Set terminal colors
+TERM=xterm-256color
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
