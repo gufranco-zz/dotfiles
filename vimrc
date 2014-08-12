@@ -89,6 +89,8 @@ let NERDTreeDirArrows = 1
 let g:airline#extensions#tabline#enabled = 1
 " use powerline fonts
 " github.com/Lokaltog/powerline-fonts
-"let g:airline_powerline_fonts = 1
-
-
+let g:airline_powerline_fonts = 1
+" dont redraw while executing macros 
+set lazyredraw
+" appear all time
+set laststatus=2
