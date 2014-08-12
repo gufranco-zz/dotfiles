@@ -68,6 +68,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=pt_BR.UTF-8
 
 # Set terminal colors
+# Linux: sudo apt-get -y install ncurses-term
 TERM=xterm-256color
 
 # Preferred editor for local and remote sessions
