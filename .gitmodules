@@ -13,9 +13,6 @@
 [submodule "vim/bundle/neocomplcache.vim"]
 	path = vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
