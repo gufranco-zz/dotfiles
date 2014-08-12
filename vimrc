@@ -69,7 +69,7 @@ execute pathogen#infect()
 " NERDTree
 "
 " map Control-n to toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <C-\> :NERDTreeToggle<CR>
 " open automatically when vim starts up but no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -81,3 +81,14 @@ let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 " dir arrows
 let NERDTreeDirArrows = 1
+
+"
+" Airline
+"
+" start airline
+let g:airline#extensions#tabline#enabled = 1
+" use powerline fonts
+" github.com/Lokaltog/powerline-fonts
+"let g:airline_powerline_fonts = 1
+
+
