@@ -15,7 +15,7 @@ alias mem="top -o rsize"
 alias la="ls -aF"
 alias ld="ls -ld"
 alias ll="ls -l"
-alias f5="source ~/.zshrc"
+alias f5="cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
 
 
 # Uncomment the following line to use case-sensitive completion.
