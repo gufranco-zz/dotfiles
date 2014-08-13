@@ -37,7 +37,7 @@ if (&t_Co > 2 || has("gui_running"))
   " Enable cursor line highlighting
   set cursorline
 
-  " Enable support to 256 colors
+  " Enable support for 256 colors
   set t_Co=256
 
   " Enable overlength line highlighting
@@ -96,29 +96,29 @@ execute pathogen#infect()
 "
 " NERDTree
 "
-" map Control-n to toggle NERDTree
+" Map Control-n to toggle NERDTree
 map <C-\> :NERDTreeToggle<CR>
-" open automatically when vim starts up but no files were specified
+" Open automatically when vim starts up but no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" close vim when NERDTree is the only window left
+" Close vim when NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" show hidden files by default
+" Show hidden files by default
 let NERDTreeShowHidden = 1
-" minimal UI
+" Minimal UI
 let NERDTreeMinimalUI = 1
-" dir arrows
+" Dir arrows
 let NERDTreeDirArrows = 1
 
 "
 " Airline
 "
-" start airline
+" Start airline
 let g:airline#extensions#tabline#enabled = 1
-" use powerline fonts
+" Use powerline fonts
 " github.com/Lokaltog/powerline-fonts
 let g:airline_powerline_fonts = 1
-" dont redraw while executing macros 
+" Don't redraw while executing macros
 set lazyredraw
-" appear all time
+" Appear all time
 set laststatus=2
