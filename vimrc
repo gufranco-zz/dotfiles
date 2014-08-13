@@ -22,7 +22,9 @@
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 " THE SOFTWARE.
 
-
+"
+" Vim
+"
 " Use Vim settings, rather then Vi settings
 set nocompatible
 
@@ -43,7 +45,6 @@ if (&t_Co > 2 || has("gui_running"))
   " Enable overlength line highlighting
   if exists('+colorcolumn')
     set colorcolumn=80
-    hi ColorColumn ctermbg=DarkGrey
   else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
   endif
@@ -88,37 +89,51 @@ cab WQ wq
 cab W w
 cab Q q
 
+
+"
+" Pathogen
+"
 " Enable pathogen as submodule
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 " Run pathogen
 execute pathogen#infect()
+
 
 "
 " NERDTree
 "
 " Map Control-n to toggle NERDTree
 map <C-\> :NERDTreeToggle<CR>
+
 " Open automatically when vim starts up but no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " Close vim when NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " Show hidden files by default
 let NERDTreeShowHidden = 1
+
 " Minimal UI
 let NERDTreeMinimalUI = 1
+
 " Dir arrows
 let NERDTreeDirArrows = 1
+
 
 "
 " Airline
 "
 " Start airline
 let g:airline#extensions#tabline#enabled = 1
+
 " Use powerline fonts
-" github.com/Lokaltog/powerline-fonts
 let g:airline_powerline_fonts = 1
+
 " Don't redraw while executing macros
 set lazyredraw
+
 " Appear all time
 set laststatus=2
