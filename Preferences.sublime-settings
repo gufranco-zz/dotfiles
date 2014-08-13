@@ -1,85 +1,52 @@
 /*
- * Dependências desse arquivo de configuração:
+ * The MIT License (MIT)
  *
- * Fonte: font.ubuntu.com
- * Tema : github.com/buymeasoda/soda-theme
- * Cores: github.com/chriskempson/tomorrow-theme
+ *Copyright (c) 2014 Gustavo Franco
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
+
+
 {
-  // Esquema de cores para Sublime
   "theme": "Soda Dark.sublime-theme",
-
-  // Esquema de cores para texto
   "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
-
-  // Altera a tecla que faz o autocomplete para tab
   "auto_complete_commit_on_tab": true,
-
-  // Garante que exista uma linha em branco no fim dos arquivos
   "ensure_newline_at_eof_on_save": true,
-
-  // Fonte do texto
   "font_face": "Ubuntu Mono",
-
-  // Tamanho da fonte do texto
   "font_size": 12.0,
-
-  // Suavização da fonte do texto
   "font_options": ["subpixel_antialias"],
-
-  // Destaca a linha que o cursor esta
   "highlight_line": true,
-
-  // Destaca as abas que possuem modificação
   "highlight_modified_tabs": true,
-
-  // Esconde o mapa do arquivo
   "new_window_settings": {"show_minimap": false},
-
-  /*
-   * Exibe guia nas colunas com recomendação PEP8
-   * Docstrings: 72
-   * Código: 79
-   */
   "rulers": [72, 79],
-
-  // Salva o arquivo atual quando a aba não esta em foco
   "save_on_focus_lost": true,
-
-  // Exibe o caminho completo do arquivo que está sendo editado
   "show_full_path": true,
-
-  // Converte TABs em espaços
   "translate_tabs_to_spaces": true,
-
-  // Define a identação com tamanho 2
   "tab_size": 2,
-
-  // Remove espaços em branco quando o arquivo é salvo
   "trim_trailing_white_space_on_save": true,
-
-  // Nome de diretórios em negrito
   "bold_folder_labels": true,
-
-  // Desabilita o drag and drop de seleção de textos
   "drag_text": false,
-
-  // Formato do cursor (Opções: smooth, phase, blink, wide e solid)
   "caret_style": "phase",
-
-  // Exibe caracteres em branco
   "draw_white_space": "all",
-
-  // Opção de recolher ou exibir bloco de código sempre visível
   "fade_fold_buttons": false,
-
-  // Exibe onde começa e termina a identação
   "indent_guide_options": ["draw_normal", "draw_active"],
-
-  // Marca palavras semelhantes da palavra selecionada
   "find_selected_text": true,
-
-  // Arquivos binários
   "binary_file_patterns": ["*.psd",
                            "*.jpg",
                            "*.jpeg",
@@ -94,8 +61,6 @@
                            "*.swf",
                            "*.jar",
                            "*.zip"],
-
-  // Arquivos ignorados
   "file_exclude_patterns": ["*.lib",
                             ".DS_Store",
                             "*~",
@@ -110,8 +75,6 @@
                             "ehthumbs.db",
                             "Desktop.ini",
                             "*.sass-cache"],
-
-  // Pastas ignoradas
   "folder_exclude_patterns": [".git",
                               ".svn",
                               ".vagrant",
@@ -123,14 +86,8 @@
                               "dist",
                               "build",
                               "$RECYCLE.BIN"],
-
-  // Espaçamento superior da linha
   "line_padding_top": 1,
-
-  // Espaçamento inferior da linha
   "line_padding_bottom": 1,
-
-  // Indentação de código
   "indent_guide_options": ["draw_normal"],
   "indent_subsequent_lines": true,
   "match_brackets": true,
