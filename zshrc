@@ -8,15 +8,16 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cpu="top -o cpu"
 alias mem="top -o rsize"
 alias la="ls -aF"
 alias ld="ls -ld"
 alias ll="ls -l"
-alias f5="cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
-
+if [[ `uname` == 'Linux' ]]; then
+  alias f5="sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
+else
+  alias f5="brew update && brew upgrade && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
