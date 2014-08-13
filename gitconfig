@@ -1,28 +1,47 @@
+# The MIT License (MIT)
+#
+# Copyright (c) 2014 Gustavo Franco
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+
 [user]
-  # Nome do usuário que será utilizado nos commits
+  # Name
   name = Gustavo Franco
 
-  # Email de identificação do usuário
+  # E-mail
   email = gustavocfranco@gmail.com
 
-[github]
-  # Username do usuário no github
-  user = gufranco
-
 [core]
-  # Arquivo global de ignores
+  # Global ignore
   excludesfile = ~/.gitglobalignore
 
-  # Mantem a quebra de linha original do arquivo remoto. Não converte para CRLF
+  # Don't convert line break to CRLF. Keep CR
   autocrlf = input
 
-  # Paginação dos resultados
+  # Paginate results
   pager = less -FRSX
 
-  # Corrige e remove espaços em branco, usa CR no final das linhas e indenta com espaço
+  # Remove whitespaces, use CR and indent using spaces
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
-  # Editor padrão de texto para ser utilizado quando necessário
+  # Default text editor
   editor = vim -f
 
 [color]
@@ -45,81 +64,87 @@
   new = green
 
 [branch]
-  # Sempre efetuar rebase ao ocorrer merge no branch
+  # Always merge using rebase
   autosetuprebase = always
 
 [rerere]
-  # Utilizar conflitos já resolvidos por outros usuários
+  # Reuse recorded resolution
   enabled = true
 
 [push]
-  # Enviar somente o branch atual no push
+  # Only push current branch
   default = current
 
 [help]
-  # Sugerir o comando correto ao digitar errado
+  # Suggest the correct command
   autocorrect = 1
 
 [alias]
-  # Quem sou eu? :)
+  # Who am I? IT'S A ME, MARIO! :)
   me = config user.name
 
-  # Efetua commit das modificações efetuadas no branch
+  # Commit shortcut
   ci = commit
 
-  # Efetua checkout do branch informado
+  # Commit shortcut
   co = checkout
 
-  # Exibe status do branch atual de forma mais simplificada (menos verbosa)
+  # Less verbose status
   st = status -sb
 
-  # Efetua checkout do branch master
+  # Checkout master
   cm = checkout master
 
-  # Efetua checkout do branch development
+  # Checkout homologation
+  ch = checkout homologation
+
+  # Checkout development
   cd = checkout development
 
-  # Efetua push do branch atual para o branch master
+  # Push master
   pm = push -u origin master
 
-  # Efetua push do branch atual para o branch development
+  # Push homologation
+  ph = push -u origin homologation
+
+  # Push development
   pd = push -u origin development
 
-  # Sincroniza o repositório local com o remoto
+  # Syncronize local branchs with remote
   fe = fetch origin
 
-  # Cria um novo branch baseado no branch atual
+  # Fork a branch
   fork = checkout -b
 
-  # Efetua pull sem rebase automático
+  # Pull without rebase
   pmerge = pull --no-rebase
 
-  # Efetua pull do projeto e todos os submodulos
-  pull-sub = !(git submodule foreach git pull origin master)
+  # Complete pull (with submodules)
+  pull-sub = !(git pull && git submodule foreach git pull origin master)
 
-  # Logs bonitinhos, ne? Ninguém é de ferro :)
+  # Pretty log
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
-  # Exibe os commits remotos que estão acima do branch local
+  # Remote commits ahead of mine
   incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
 
-  # Exibe os commits locais que estão acima do branch remoto
+  # Remote commits ahead of local
   outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
 
-  # Desfaz a inclusao de arquivos modificados
+  # The missing command <3
   unstage = reset HEAD --
 
-  # Desfaz a modificação no arquivo
+  # Undo modifications to a file
   undo = checkout --
 
-  # Exibe o log dos commits efetuados por mim nas últimas 24 horas
+  # Last 24 hours commits
   standup = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --since yesterday --author 'Gustavo Franco'
 
-  # Revisa os commits que serão enviados antes do push - http://code.joejag.com/2013/everyday-git-aliases/
+  # Review commits before pushing
   ready = rebase -i @{u}
 
-  # Exibe a hierarquia dos branchs
+  # Branchs hier
   hier = log --all --graph --decorate --oneline --simplify-by-decoration
 
-  # Efetua backup do repositório local
+  # Backup isn't enough <3
   backup = !tar -cvzf ../git_backup.tgz *
