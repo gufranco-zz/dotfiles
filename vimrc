@@ -25,7 +25,7 @@
 "
 " Vim
 "
-" Use Vim settings, rather then Vi settings
+" Use Vim settings, rather than Vi settings
 set nocompatible
 
 " Check color support
@@ -78,6 +78,12 @@ set fileencoding=utf-8
 
 " Use two spaces as tab
 set tabstop=2 shiftwidth=2 expandtab
+
+" Set swap files directory
+set directory=/tmp
+
+" Set backup files directory
+set backupdir=/tmp
 
 " Shortcuts
 cab W! w!
