@@ -85,6 +85,9 @@ set directory=/tmp
 " Set backup files directory
 set backupdir=/tmp
 
+" Auto reload files when they change
+set autoread
+
 " Shortcuts
 cab W! w!
 cab Q! q!
