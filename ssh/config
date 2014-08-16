@@ -2,3 +2,9 @@ Host guepardolabs.com
   HostName 54.207.92.26
   User ubuntu
   IdentityFile "~/.ssh/keys/guepardolabs.com.pem"
+
+Host lovecam.com.br
+  HostName 177.71.176.113
+  User ubuntu
+  IdentityFile "~/.ssh/keys/lovecam.com.br.pem"
+
