@@ -32,3 +32,6 @@ ln -s ~/.dotfiles/gitglobalignore ~/.gitglobalignore
 echo "Configuring oh-my-zsh"
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh
+
+echo "Configuring ssh"
+ln -s ~/.dotfiles/ssh ~/.ssh
