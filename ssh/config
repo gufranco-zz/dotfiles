@@ -6,6 +6,7 @@ Host guepardolabs.com
   HostName 54.207.92.26
   User ubuntu
   IdentityFile "~/.ssh/keys/guepardolabs.com.pem"
+  ServerAliveInterval 30
 
 #
 # Lovecam
@@ -15,18 +16,4 @@ Host lovecam.com.br-web
   HostName 177.71.188.138
   User ubuntu
   IdentityFile "~/.ssh/keys/lovecam.com.br.pem"
-
-
-
-Host lovecam.com.br-ams
-  HostName 177.71.173.217
-  User ubuntu
-  IdentityFile "~/.ssh/keys/lovecam.com.br.pem"
-Host lovecam.com.br-db
-  HostName 54.232.125.88
-  User ubuntu
-  IdentityFile "~/.ssh/keys/lovecam.com.br.pem"
-Host lovecam.com.br-site
-  HostName 54.207.185.135
-  User ubuntu
-  IdentityFile "~/.ssh/keys/lovecam.com.br.pem"
+  ServerAliveInterval 30
