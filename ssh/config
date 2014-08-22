@@ -2,10 +2,15 @@
 # Guepardo Labs
 #
 # Web server
-Host guepardolabs.com
+Host guepardolabs.com-web
   HostName 54.207.92.26
   User ubuntu
   IdentityFile "~/.ssh/keys/guepardolabs.com.pem"
+  ServerAliveInterval 30
+# GitLab server
+Host guepardolabs.com-gitlab
+  Hostname 23.239.31.65
+  User root
   ServerAliveInterval 30
 
 #
