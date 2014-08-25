@@ -22,16 +22,43 @@
 # THE SOFTWARE.
 
 echo "Configuring vim"
+if [ -f ~/.vim ] || [ -h ~/.vim ]; then
+  mv ~/.vim ~/.vim-old
+fi
 ln -s ~/.dotfiles/vim ~/.vim
+
+if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
+  mv ~/.vimrc ~/.vimrc-old
+fi
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 
+
 echo "Configuring Git"
+if [ -f ~/.gitconfig ] || [ -h ~/.gitconfig ]; then
+  mv ~/.gitconfig ~/.gitconfig-old
+fi
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+
+if [ -f ~/.gitglobalignore ] || [ -h ~/.gitglobalignore ]; then
+  mv ~/.gitglobalignore ~/.gitglobalignore-old
+fi
 ln -s ~/.dotfiles/gitglobalignore ~/.gitglobalignore
 
+
 echo "Configuring oh-my-zsh"
+if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
+  mv ~/.zshrc ~/.zshrc-old
+fi
 ln -s ~/.dotfiles/zshrc ~/.zshrc
+
+if [ -f ~/.oh-my-zsh ] || [ -h ~/.oh-my-zsh ]; then
+  mv ~/.oh-my-zsh ~/.oh-my-zsh-old
+fi
 ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh
 
-echo "Configuring ssh"
+
+echo "Configuring SSH"
+if [ -f ~/.ssh ] || [ -h ~/.ssh ]; then
+  mv ~/.ssh ~/.ssh-old
+fi
 ln -s ~/.dotfiles/ssh ~/.ssh
