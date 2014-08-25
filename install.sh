@@ -21,6 +21,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+echo "Cloning repository"
+git clone --recursive https://github.com/gufranco/dotfiles.git ~/.dotfiles
+
 echo "Configuring vim"
 if [ -f ~/.vim ] || [ -h ~/.vim ]; then
   mv ~/.vim ~/.vim-old
