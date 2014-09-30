@@ -1,21 +1,21 @@
-# Path to your oh-my-zsh installation.
+# Oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Oh-my-zsh theme
 ZSH_THEME="steeef"
 
-# Example aliases
+# Aliases
 alias cpu="top -o cpu"
 alias mem="top -o rsize"
 alias la="ls -aF"
 alias ld="ls -ld"
 alias ll="ls -l"
 if [[ `uname` == 'Linux' ]]; then
+  # Linux
   alias f5="sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
+  alias makerware="env LC_ALL=\"en_US.UTF-8\" makerware"
 else
+  # OS X
   alias f5="brew update && brew upgrade && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
 fi
 
@@ -53,36 +53,25 @@ HIST_STAMPS="dd/mm/yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Oh-my-zsh plugins
 plugins=(git rails ruby node rvm vagrant brew gem github npm osx)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
+# Language environment
 export LANG=pt_BR.UTF-8
 
-# Set terminal colors
-# Linux: sudo apt-get -y install ncurses-term
-TERM=xterm-256color
+# Specific configurations
+if [[ `uname` == 'Linux' ]]; then
+  # Linux
+  alias makerware="env LC_ALL=\"en_US.UTF-8\" makerware"
+  TERM=xterm-256color
+else
+  # OS X
+fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# SSH key
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# RVM path
+export PATH="$PATH:$HOME/.rvm/bin"
