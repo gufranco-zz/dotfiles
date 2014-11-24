@@ -2,7 +2,7 @@ Install
 =======
 
 ```
-curl -L http://raw.githubusercontent.com/gufranco/dotfiles/master/install.sh | sh
+curl -L https://raw.githubusercontent.com/gufranco/dotfiles/master/install.sh | sh
 ```
 License
 =======
