@@ -5,18 +5,39 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 
 # Aliases
-alias cpu="top -o cpu"
-alias mem="top -o rsize"
+alias ls="ls --color=auto"
 alias la="ls -aF"
 alias ld="ls -ld"
-alias ll="ls -l"
-if [[ `uname` == 'Linux' ]]; then
-  # Linux
+alias ll="ls -la"
+alias l.="ls -d .* --color=auto"
+alias cd..="cd .."
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias bc="bc -l"
+alias sha1="openssl sha1"
+alias mkdir="mkdir -pv"
+alias mount="mount |column -t"
+alias ping="ping -c 5"
+alias fastping="ping -c 100 -s.2"
+alias ports="netstat -tulanp"
+alias wget="wget -c"
+
+# Specific aliases and configurations
+if [[ `uname` == "Linux" ]]; then
+  # Configurations
+  TERM=xterm-256color
+
+  # Aliases
   alias f5="sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
   alias makerware="env LC_ALL=\"en_US.UTF-8\" makerware"
 else
-  # OS X
+  # Configurations
+
+  # Aliases
   alias f5="brew update && brew upgrade && cd ~/.dotfiles && git pull-sub && source ~/.zshrc"
+  alias cpu="top -o cpu"
+  alias mem="top -o rsize"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
@@ -60,15 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Language environment
 export LANG=pt_BR.UTF-8
-
-# Specific configurations
-if [[ `uname` == 'Linux' ]]; then
-  # Linux
-  alias makerware="env LC_ALL=\"en_US.UTF-8\" makerware"
-  TERM=xterm-256color
-else
-  # OS X
-fi
 
 # SSH key
 export SSH_KEY_PATH="~/.ssh/dsa_id"
