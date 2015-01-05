@@ -1,2 +1,2 @@
-*.pem
-ssh/known_hosts
+ssh/*
+!ssh/config

@@ -75,7 +75,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Oh-my-zsh plugins
-plugins=(git rails ruby node rvm vagrant brew gem github npm osx)
+plugins=(git rails ruby node rvm vagrant brew gem github npm osx ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=pt_BR.UTF-8
 
 # SSH key
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # RVM path
 export PATH="$PATH:$HOME/.rvm/bin"
