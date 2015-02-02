@@ -38,6 +38,12 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
 fi
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 
+echo "Configuring Sublime Text"
+if [ -f ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ] || [ -h ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ]; then
+  mv ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings.old
+fi
+ln -s ~/.dotfiles/Preferences.sublime-settings ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
+
 
 echo "Configuring Git"
 if [ -f ~/.gitconfig ] || [ -h ~/.gitconfig ]; then
